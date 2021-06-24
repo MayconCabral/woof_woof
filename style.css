@@ -4,10 +4,19 @@ body{
     overflow: hidden;
     background-color: rgb(189, 220, 250);
 }
+/*DOG CARTOON
+================================*/
 svg{
     position: relative;
     right: 12%;
     top: 2%;
     width: 50%;
     height: 50%;
+}
+#closedEyes{
+    opacity: 0;
+}
+button{
+    width: 30px;
+    height: 30px;
 }
