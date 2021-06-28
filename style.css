@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 body{
+    margin: 0;
     font-family: 'Poppins', sans-serif;
     font-size: 3.1vw;
     color: #2F2E41;
@@ -31,7 +32,8 @@ svg{
 
 /*PHOTO COLLEGE
 =================================*/
-.collegeContainer{
+.collegeContainer{  
+    margin-top: 3%; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,9 +87,10 @@ img{
 
 /*DOG'S BREED FORM
 =================================*/
-input, label, datalist{
+.form{
     grid-column: 1 / 2;
     grid-row: 3 / 4;
+    height: 0;
 }
 input{
     width: 72%;
@@ -112,8 +115,86 @@ input[type=text]{
 label, input{
     margin-left: 5%;
 }
+
 span{
     margin-left: 2%;
 }
 
+/*RESPONSIVE
+=======================================*/
 
+@media screen and (max-width: 800px) {
+    body{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }    
+    svg{        
+        grid-row: 2 / 3;
+        width: 100%;
+        height: 100%;
+    }
+    .form{         
+        height: 0;  
+        width: 80%;
+        margin-right: 20%; 
+        grid-column: 2 / -1;      
+        grid-row: 2 / 3; 
+        position: relative;
+        top: 40%;       
+        text-align: center;
+    }
+    label{
+        font-size: 5vw;
+    }
+    input{
+        width: 90%;
+    }
+    
+    
+    .collegeContainer{  
+        grid-column: 1 / 3;     
+        grid-row: 1 / 2;  
+        margin: 2.5% auto;
+        width: 95%;     
+    }    
+}
+
+@media screen and (max-width: 480px){
+    body{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 100px;
+    }
+    .collegeContainer, svg, .form{
+        grid-column: 1;
+    }
+    .collegeContainer{
+        grid-row: 1 / 2;
+    }
+    svg{
+        grid-row: 2 / 3;        
+        position: relative;
+        bottom: 10%;
+        width: 90%;
+        margin: auto;
+    }
+    .form{
+        grid-row: 3 / 4;              
+        margin: 0 auto;
+        top: -40%;
+    }
+    label{
+        font-size: 10vw;
+    }
+    input[type=text]{
+        font-size: 3vw;
+    }
+}
+@media screen and (max-width: 360px){
+    svg{
+        width: 80%;
+        bottom: 0;       
+    }
+    .form{
+        top: -10%;             
+    }
+}
