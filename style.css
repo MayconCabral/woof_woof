@@ -23,11 +23,6 @@ svg{
 #closedEyes{
     opacity: 0;
 }
-button{
-    grid-column: 1 / 2;
-    width: 30px;
-    height: 30px;
-}
 
 /*PHOTO COLLEGE
 =================================*/
@@ -82,3 +77,22 @@ img{
 .dog7, .dog8{
    grid-row: 3 / 5;
 }
+
+/*DOG'S BREED FORM
+=================================*/
+button, input, label, datalist{
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+button{   
+    width: 100px;
+    height: 30px;
+}
+input{
+    width: 80%;
+    height: 15%;
+    position: relative;
+    top: 15%;
+}
+
+
