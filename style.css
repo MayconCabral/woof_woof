@@ -80,13 +80,9 @@ img{
 
 /*DOG'S BREED FORM
 =================================*/
-button, input, label, datalist{
+input, label, datalist{
     grid-column: 1 / 2;
     grid-row: 3 / 4;
-}
-button{   
-    width: 100px;
-    height: 30px;
 }
 input{
     width: 80%;
