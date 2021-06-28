@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
 *{
     box-sizing: border-box;
 }
 body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.1vw;
+    color: #2F2E41;
     box-sizing: border-box;
     width: 100vw;
     height: 100vh;
@@ -85,10 +90,30 @@ input, label, datalist{
     grid-row: 3 / 4;
 }
 input{
-    width: 80%;
+    width: 72%;
     height: 15%;
     position: relative;
-    top: 15%;
+    bottom: -30%; 
+    outline: none;      
+}
+input[type=text]{
+    font-size: 1.35vw;
+    border: 5px solid #2F2E41;
+    font-family: 'Poppins', sans-serif;
+    color: #2F2E41;
+    padding: 15px 0 15px 40px;
+    background-image: url(img/PawDesktop.png);
+    background-repeat: no-repeat;
+    background-position: 5px 3px;
+    
+    
+    
+}
+label, input{
+    margin-left: 5%;
+}
+span{
+    margin-left: 2%;
 }
 
 
