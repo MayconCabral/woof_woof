@@ -1,6 +1,8 @@
 const barkAudio = document.querySelector('audio');
 const btn = document.querySelector('button');
 const getValue = document.getElementById('breeds');
+const img = document.querySelectorAll('img')
+
 
 //Blinking eyes 
 let blinking = gsap.timeline({repeatDelay:.3, repeat:-1, yoyo:true});
@@ -17,10 +19,21 @@ function quiet(){
     mouth.reverse(1)
 }
 
-//Getting values
+//Getting values and Fetch
 getValue.addEventListener('change', function(){
-   breed = getValue.value    
+   let breed = getValue.value.toLowerCase().replace(' ', '/')
+   let breeds = breed.split('/').reverse().join('/') 
+   fetch(`https://dog.ceo/api/breed/${breeds}/images`)
+    .then(response => response.json())
+    .then(data =>{
+        img.forEach((dog, i)=>{
+            //index = Math.floor(Math.random()* 2) + i;
+            dog.src = data.message[i]
+        })
+    })   
    mouth.play()
-   barkAudio.play()
+   barkAudio.play()    
 })
+
+
 
