@@ -15,7 +15,7 @@ body{
     background: rgb(172,182,229);
     background: linear-gradient(114deg, rgba(172,182,229,1) 0%, rgba(134,253,232,1) 100%);
     display: grid;     
-    grid-template-columns: 1fr 2fr 20px;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 1fr 1fr 20px;
 }
 /*DOG CARTOON
@@ -32,7 +32,9 @@ svg{
 
 /*PHOTO COLLEGE
 =================================*/
-.collegeContainer{    
+.collegeContainer{
+    width: 95%;
+    height: 95%;    
     margin-top: 3%; 
     display: flex;
     justify-content: center;
