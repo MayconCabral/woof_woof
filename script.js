@@ -27,10 +27,12 @@ getValue.addEventListener('change', function(){
     .then(response => response.json())
     .then(data =>{
         img.forEach((dog, i)=>{
-            //index = Math.floor(Math.random()* 2) + i;
             dog.src = data.message[i]
+            if(!data.message[i]){
+               return dog.src = 'img/blueBone.png'
+            }
         })
-    })   
+    })
    mouth.play()
    barkAudio.play()    
 })
