@@ -165,7 +165,7 @@ span{
 @media screen and (max-width: 480px){
     body{
         grid-template-columns: 1fr;
-        grid-template-rows: minmax(240px, 1fr) 1fr 100px;
+        grid-template-rows: minmax(240px, 1fr) 1fr 150px;
     }
     .collegeContainer, svg, .form{
         grid-column: 1;
