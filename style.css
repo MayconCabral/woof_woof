@@ -177,7 +177,7 @@ span{
         grid-row: 2 / 3;        
         position: relative;
         bottom: 10%;
-        width: 90%;
+        width: 60%;
         margin: auto;
     }
     .form{
@@ -193,10 +193,7 @@ span{
     }
 }
 @media screen and (max-width: 360px){
-    svg{
-        width: 80%;
-        bottom: 0;       
-    }
+   
     .form{
         top: -10%;             
     }
